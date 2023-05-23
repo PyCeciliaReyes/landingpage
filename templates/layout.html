@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/882/882998.png" type="image/x-icon">
+    <title>Fono Fio Belotto</title>
+    <!-- BOOTSTRAP 4 CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  </head>
+  
+  <body>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link {% if active_page == 'home' %}active{% endif %}" aria-current="page"
+              href="{{ url_for('home') }}">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle {% if active_page == 'cursos' %}active{% endif %}" href="#" id="navbarDropdown"
+              role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Cursos
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Menu 1</a>
+              <a class="dropdown-item" href="#">Menu 2</a>
+              <a class="dropdown-item" href="#">Menu 3</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Link separado</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if active_page == 'about' %}active{% endif %}" href="{{ url_for('about') }}">About me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if active_page == 'register' %}active{% endif %}" href="{{url_for('register')}}">Registrarme</a>
+          </li>
+        </ul>
+      
+
+    <div class="container p-4">
+      {% block content %}
+      {% endblock%}
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+          var url = window.location.href;
+          $('.nav-link').removeClass('active');
+          $('.nav-link[href="' + url + '"]').addClass('active');
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+
+  

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+
+{% block content %}
+<body>
+    <div class="jumbotron">
+      <h1 class="display-4">¡Hola! soy Fono Fio Belotto </h1>
+      <p class="lead">Te cuento un poco sobre mí.</p>
+      <hr class="my-4">
+      <p>Seguime en mis redes, donde subo contenido importante a cada momento.</p>
+      <a class="btn btn-primary btn-lg" href="https://instagram.com/fono_fiobelotto?igshid=MzRlODBiNWFlZA==" target="_blank" role="button">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('home') }}" role="button">Volver a inicio</a>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+{% endblock%}
