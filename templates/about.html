@@ -2,20 +2,46 @@
 {% extends "layout.html" %}
 
 {% block content %}
+<style>
+  body {
+    background-image: url('https://i.pinimg.com/originals/ca/42/71/ca4271ae604c068e91c7b261837e11ea.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-name: fade-in;
+    animation-duration: 3s;
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+</style>
+
 <body>
     <div class="jumbotron">
       <h1 class="display-4">¡Hola! soy Fono Fio Belotto </h1>
-      <p class="lead">Te cuento un poco sobre mí.</p>
+      <p class="lead">Te cuento un poco sobre mí:</p>
+      <p class="lead"> Ayudo al desarrollo del lenguaje, habla - articulación y motricidad orofacial. </p>
       <hr class="my-4">
       <p>Seguime en mis redes, donde subo contenido importante a cada momento.</p>
       <a class="btn btn-primary btn-lg" href="https://instagram.com/fono_fiobelotto?igshid=MzRlODBiNWFlZA==" target="_blank" role="button">
         <i class="fab fa-instagram"></i>
       </a>
+      <a class="btn btn-primary btn-lg" href="https://www.facebook.com/profile.php?id=100041637925513&mibextid=ZbWKwL" target="_blank" role="button">
+        <i class="fab fa-facebook"></i>
+      </a>
     </div>
-    <a class="btn btn-primary btn-lg" href="{{ url_for('home') }}" role="button">Volver a inicio</a>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('home') }}" role="button">Volver al inicio</a>
     
+    <!--SCRIPTS-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 {% endblock%}

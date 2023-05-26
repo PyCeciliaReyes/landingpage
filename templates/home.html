@@ -1,9 +1,37 @@
 {% extends "layout.html" %}
 
 {% block content %}
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background: #83a4d4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #b6fbff, #83a4d4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #b6fbff, #83a4d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-name: fade-in;
+    animation-duration: 3s;
+  }
 
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .jumbotron {
+    background-color: transparent;
+    border: none;
+  }
+</style>
 <div class="jumbotron">
-  <h1 class="display-4">¡Bienvenido!</h1>
+  <h1 class="display-4">¡Bienvenidos!</h1>
   <p class="lead">Me gusta mucho mi profesion, lo elegi porque siento que puedo dar y enseñar las mejores virtudes a los niños a sus familias a traves del lenguaje.</p>
   <hr class="my-1">
   <p>Estoy estudiando cada dia más para ofrecer los mejor y ultimo en tendencia de fonoaudiologia a mis pacientes con el fin de mejorar su calidad de vida </p>
